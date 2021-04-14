@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <style>
+            /*Navigation Bar CSS*/
+            #navBar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+            
+            .navDest {
+                float:left;
+            }
+            
+            .navName {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            
+            .navName:hover {
+                background-color: #111;
+            }
+            
+            /*General image page CSS*/
+            .picture{
+                width: 300px;
+                height: 300px;
+            }
+
+            /*icons*/
+
+            i {
+                float: left;
+            }
+            
+            /*Light Box CSS*/
+            /*Determines formatting of background when initiate light box*/
+            .modal {
+                    display: none; /* Hidden by default */
+                    position: fixed; /* Stay in place */
+                    z-index: 1; /* Sit on top */
+                    left: 0;
+                    top: 0;
+                    width: 100%; /* Full width */
+                    height: 100%; /* Full height */
+                    overflow: auto; /* Enable scroll if needed */
+                    background-color: black;
+            }
+            /* Determines the formatting of content box */
+            .lightbox-content {
+                    position: relative;
+                    background-color: black/*#fefefe*/;
+                    margin: auto;
+                    padding: 0;
+                    width: 100%;
+            }
+            
+            #lightPic {
+                width: 30%;
+                height: 30%;
+            }
+            /* Determines the CSS formatting of the light box's close button. */
+          .close {
+                    color: #aaa;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+             }
+
+          .close:hover,
+          .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+             }
+        </style>
+        <title>About Me</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        
+
+
+
+        <!--The Navigation Bar-->
+        <ul id='navBar'>
+            <li class='navDest'><a class='navName' href='About_Me.html'>About</a></li>
+            <li class='navDest'><a class='navName' href='Just_a_few_of_my_favorite_things.html'>Just A Few of My Favorite Things</a></li>
+            <li class='navDest'><a class='navName' href='Contact_me.html'>Contact</a></li>
+        </ul>
+
+        
+        <h1>About Me:</h1>
+        <!--Text Content-->
+        <div class="Jeffrey" id="like_button_container"></div>
+        <div>
+            <p>I am a person who has always wanted to dig deep into a topic and see how it everything ticks. 
+                My family comes from a long line of Cajuns living in rural Louisiana, so when my parents packed us up and moved up north to Michigan I saw it as a grand adventure. 
+                All the different people, places, and seasons, I just had to dive in and figure it all out. 
+                This of course translated well into school where my natural inquisitiveness allowed me to excel in every class I took. 
+                More importantly though, I was loving it the entire time.
+            </p>
+
+            
+            
+            <p>Moving back to Louisiana was just as much of a joy as I could learn just as much about where I came from, putting salt back in food instead of the road and joining wrestling teams instead of hockey. 
+                From here, I took a major in anthropology and career in archaeology after I graduated. 
+                This provided ample opportunity to discover more about the past and encounter new and interesting puzzles. 
+                The field was an unpredictable place full of challenges and puzzles that kept me mentally engaged and challenged my faculties. 
+                However, the constant lifestyle of going from middle of nowhere hotel to middle of nowhere hotel left me feeling isolated as well as purposeless.
+            </p>
+            
+            <p>Finally, I decided it was time to settle down and get some direction in my life. 
+                Boston is a thriving city filled to the brim with possibility, so I decided to make it my home. 
+                I required both mental rigor and stability in my new career path.
+                After making new friends in Boston I began to become fascinated with all of the things they could do with tech. 
+                I fiddled with Arduino’s, classes, and language libraries until I became the man that you see today.
+            </p>
+        </div>
+        
+        <h5>One of my earliest excavation sites: Cahal Pech</h5>
+        <!--An image of the Mayan Site Cahal Pech which links to a wikipedia article-->
+        <a href="https://en.wikipedia.org/wiki/Cahal_Pech" target='_blank'><!--target='_blank' is utilized to make the image open in a new tab.-->
+            <img src="pics/cahal-pech-mayan-ruins.jpg" alt="Cahal Pech" class="picture">
+        </a>
+        
+        <h5>A picture of me in Transylvania</h5>
+        <!--An image of me that will be light boxed -->
+        <img id='lightboxImg' src="pics/Me.jpg" alt="It's mah face" class="picture" onclick="openLightbox()">
+        
+        
+        <!--Utilize the HTML modal to create the light box effect-->
+        <div id="my_lightbox" class="modal" onclick="closeLightbox()">
+            <!--Give Modal content-->
+            <div class="lightbox-content">
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                <img id="lightPic" src="pics/Me.jpg" alt="It's mah face">
+            </div>
+        </div>
+        <script>
+            //Javascript function which changes the 'my_lightbox' modal element display from the defautlt to 'block' so that it may be seen.
+            function openLightbox(){
+                document.getElementById('my_lightbox').style.display = "block";
+            }
+            
+            //Javascript function which returns the 'my_lightbox' modal display value back to the default 'none' when called.
+            function closeLightbox(){
+                document.getElementById('my_lightbox').style.display = "none";
+            } 
+        </script>
+        <!-- Load React. -->
+        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+        <!-- Load our React component. -->
+        <script src="js/like_button.js"></script>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+           /*Navigation Bar CSS*/
+           
+            #navBar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+            
+            .navDest {
+                float:left;
+            }
+            
+            .navName {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            
+            .navName:hover {
+                background-color: #111;
+            }
+            
+            /*resume css*/
+            #resume {
+                width: 700px;
+                height: 900px;
+            }
+            
+            
+            /*map css*/
+            #map {
+                width: 400px;
+                height: 400px;
+                background-color: grey;
+            }
+            
+            /*Format for the offsite icons*/
+            .icon {
+                width: 72px;
+                height: 72px;
+            }
+        </style>
+        <title>Contact Me</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--The Navigation Bar-->
+        <ul id='navBar'>
+            <li class='navDest'><a class='navName' href='About_Me.html'>About</a></li>
+            <li class='navDest'><a class='navName' href='Just_a_few_of_my_favorite_things.html'>Just A Few of My Favorite Things</a></li>
+            <li class='navDest'><a class='navName' href='Contact_me.html'>Contact</a></li>
+        </ul>
+        <h1>Contact Me:</h1>
+        
+        <h3>Resume:</h3>
+        <!--Resume embedding tag-->
+        <object id='resume' data='pdf/Resume_ErikHaydel.pdf'></object>
+          
+        <h3>Social Media:</h3>
+        <!--Image tags and links to contact websites-->
+        <a href="https://www.linkedin.com/in/erik-haydel-17431566" target='_blank'>
+            <img src="icons/linkedin-icon.png" class='icon' alt="linkedin">
+        </a>
+        <a href="https://www.facebook.com/erik.haydel?ref=br_rs" target='_blank'>
+            <img src="icons/facebook-icon.png" class='icon' alt="facebook">
+        </a>
+        <a href="https://github.com/Leopardfoot" id='icon' target='_blank'>
+            <img src="icons/github-icon.png" class='icon' alt="github">
+        </a>
+        
+        
+        <!--<h3>Home Base:</h3>
+        <p>20 Victory Road Apt. 2 Dorchester, MA</p>
+        <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJRarcjKF744kRjFSQj51NzaY&key=AIzaSyDXGEZ2shV5TxwjDBpqlm9ZP8sYmm3KKn0"></iframe>-->
+
+        <!--old employer-->
+        <h3>Old Employer</h3>
+        <!--Tag for the embedded google map-->
+        <div id="map"></div>
+        <!--Javascript functions for Google Map API-->
+        <script>
+            function embedMap(){
+                /*Google maps utilizes latitude and longitude data, use their geocode API if required to
+                 * convert the address from incoming data into a new map.
+                 */
+                var coordinates = {lat: 42.300620, lng: -71.217246};
+                //Can adjust the zoom parameter as needed, other map options provided in Google's online documentation as needed.
+                var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: coordinates
+                });
+                //Google requires another variable for adding the marker onto the embedded map
+                var marker = new google.maps.Marker({
+                    position: coordinates,
+                    map: map
+                });
+
+
+            }
+        </script>
+        <!--Google Maps API Key-->
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXGEZ2shV5TxwjDBpqlm9ZP8sYmm3KKn0&callback=embedMap"></script> 
+    </body>
+</html>
+
+

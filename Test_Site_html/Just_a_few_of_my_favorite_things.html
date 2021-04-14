@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <link href='https://fonts.googleapis.com/css?family=Creepster' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Croissant One' rel='stylesheet'>
+        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+        <title>Just a few of my favorite things</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /*Navigation Bar CSS*/
+            #navBar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+            
+            .navDest {
+                float:left;
+            }
+            
+            .navName {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            
+            .navName:hover {
+                background-color: #111;
+            }
+
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .column{
+                flex-direction: column;
+            }
+
+            h3 {
+                text-shadow: 3px 3px 3px #ababab;
+            }
+
+             /*icons*/
+
+            i {
+                float: left;
+                margin-right: 10px;
+                padding-top: 41px;
+            }
+
+            #food{
+                font-family: 'Croissant One';
+            }
+
+            #movie{
+                font-family: 'Creepster';
+            }
+
+            #game {
+                font-family: "Audiowide", sans-serif;
+                text-shadow: 3px 3px 3px #ababab;
+            }
+            
+            /*table border*/
+            #places, th, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <!--The Navigation Bar-->
+        <ul id='navBar'>
+            <li class='navDest'><a class='navName' href='About_Me.html'>About</a></li>
+            <li class='navDest'><a class='navName' href='Just_a_few_of_my_favorite_things.html'>Just A Few of My Favorite Things</a></li>
+            <li class='navDest'><a class='navName' href='Contact_me.html'>Contact</a></li>
+        </ul>
+        <!---->
+            <i class="em em-milky_way" aria-role="presentation" aria-label="MILKY WAY" style="position:relative; padding-top:55.6px;"></i>
+            <h1>My Favorites! The Big E Nominees</h1>
+        <div class="flex-container">
+            <div class="column">
+            <i class="em em-pie" aria-role="presentation" aria-label="PIE"></i><h3 id='food'>My Top 5 favorite foods (In no particular order):</h3>
+                <ul>
+                    <li>Pizza</li>
+                    <li>Boudin</li>
+                    <li>Muffuletta</li>
+                    <li>Cheese Enchiladas</li>
+                    <li>Gumbo</li>
+                </ul></div>
+            <div class="column">
+             <i class="em em-film_frames" aria-role="presentation" aria-label=""></i><h3 id='movie'>My Top 5 Movies:</h3>
+                 <ol>
+                    <li>A Knight's Tale</li>
+                    <li>Ghost in the Shell</li>
+                    <li>2001 A Space Odyssey</li>
+                    <li>There Will Be Blood</li>
+                    <li>Princess Mononoke</li>
+                </ol>
+            </div>
+            <div class="column">
+            <i class="em em-book" aria-role="presentation" aria-label="OPEN BOOK"></i><h3 style="font-family: Lucida Handwriting; text-shadow: 3px 3px 3px #ababab;">My Top 5 Books (N.O.):</h3>
+                <ul>
+                    <li>Signal to Noise</li>
+                    <li>Anathem</li>
+                    <li>A Book of Five Rings</li>
+                    <li>The Metamorphosis</li>
+                    <li>The Feynman Lectures on Physics</li>
+                </ul>
+            </div>
+            <div class="column">
+            <i class="em em-joystick" aria-role="presentation" aria-label=""></i><h3 id='game'>My Top 5 Video Games:</h3>
+                <ol>
+                    <li>Bloodborne</li>
+                    <li>Hollow Knight</li>
+                    <li>LISA: The Painful RPG</li>
+                    <li>Xenogears</li>
+                    <li>The Legend of Zelda: A Link to the Past</li>
+                </ol>
+            </div>
+            <div class="column">
+                <i class="em em-dragon_face" aria-role="presentation" aria-label="DRAGON FACE"></i><h3 style="font-family: Papyrus;">My Top 5 Tabletop RPG's (N.O.):</h3>
+                    <ul>
+                        <li>Ten Candles</li>
+                        <li>Starfinder</li>
+                        <li>Changeling: The Lost</li>
+                        <li>Exalted</li>
+                        <li>Monster of the Week</li>
+                    </ul>
+            </div>
+    </div>
+        <i class="em em-airplane" aria-role="presentation" aria-label="AIRPLANE"></i>
+        <h3>Some Details on My favorite travel Destinations:</h3>
+        <table id="places">
+            <tr>
+                <th>City</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Population</th>
+            </tr>
+            <tr>
+                <td>San Ignacio</td>
+                <td>Cayo</td>
+                <td>Belize</td>
+                <td>17,878</td>
+            </tr>
+            <tr>
+                <td>Brasov</td>
+                <td>Transylvania</td>
+                <td>Romania</td>
+                <td>369,896</td>
+            </tr>
+            <tr>
+                <td>Budapest</td>
+                <td>Central Hungary</td>
+                <td>Hungary</td>
+                <td>1,759,407</td>
+            </tr>
+            <tr>
+                <td>Heidelberg</td>
+                <td>Baden-Württemberg</td>
+                <td>Germany</td>
+                <td>156,267</td>
+            </tr>
+        </table>
+    </body>
+</html>
